@@ -29,12 +29,17 @@ A API utiliza um banco de dados para armazenar informações sobre os livros. Ce
 A interface de dados para os livros inclui os seguintes campos:
 
 id: Número
+
 name: Texto
+
 pages: Número
+
 category: Texto (opcional)
+
 createdAt: Data
+
 updatedAt: Data
-Certifique-se de que os IDs dos livros sejam sequenciais e únicos, começando do ID 1.
+
 
 ## Rotas
 A API disponibiliza as seguintes rotas para manipulação dos livros:
@@ -49,7 +54,8 @@ PATCH /books/:id: Atualização de um livro existente.
 
 DELETE /books/:id: Remoção de um livro do sistema.
 
-##Requisições e Respostas
+## Requisições e Respostas
+
 As requisições e respostas para cada rota devem seguir os formatos especificados. Aqui estão alguns exemplos:
 
 ## POST /books
@@ -103,7 +109,7 @@ json
 }
 ```
 ## PATCH /books/:id
-Todas as chaves do corpo deverão ser opcionais (ou seja, caso alguma chave esteja ausente, a atualização ainda deverá ser bem sucedida).
+Todas as chaves do corpo são opcionais (ou seja, caso alguma chave esteja ausente, a atualização ainda deverá ser bem sucedida).
 
 Modelo de requisição
 json
