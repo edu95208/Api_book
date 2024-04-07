@@ -2,27 +2,30 @@
 
 Este é o README para a API de gerenciamento de livros. Aqui você encontrará informações detalhadas sobre como configurar, usar e desenvolver esta API.
 
-#Introdução
+## Introdução
 
 Bem-vindo à API de Gerenciamento de Livros! Esta API foi desenvolvida como parte de um projeto para aplicar os conceitos aprendidos até agora, com foco em Desenvolvimento Orientado a Testes (TDD). Todos os testes necessários já foram escritos e devem ser mantidos sem alterações.
 
-##Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 Node.js: Plataforma de desenvolvimento para construir a API.
-Express: Framework web para Node.js utilizado para lidar com rotas e requisições HTTP.
-Jest: Framework de testes utilizado para escrever e executar testes automatizados.
-TypeScript: Linguagem de programação que adiciona tipagem estática ao JavaScript.
-SQLite: Banco de dados utilizado para armazenar informações sobre os livros.
 
-##Configuração Inicial
+Express: Framework web para Node.js utilizado para lidar com rotas e requisições HTTP.
+
+Jest: Framework de testes utilizado para escrever e executar testes automatizados.
+
+TypeScript: Linguagem de programação que adiciona tipagem estática ao JavaScript.
+
+
+## Configuração Inicial
 Para começar a trabalhar com esta API, siga estas etapas:
 
 Clone o repositório: Use o comando git clone para clonar este repositório para o seu ambiente local.
 Instale as dependências: Execute o comando npm install para instalar todas as dependências necessárias.
-##Banco de Dados
+## Banco de Dados
 A API utiliza um banco de dados para armazenar informações sobre os livros. Certifique-se de configurar o banco de dados conforme as instruções fornecidas no arquivo database/database.ts.
 
-##Interface de Dados
+## Interface de Dados
 A interface de dados para os livros inclui os seguintes campos:
 
 id: Número
@@ -33,7 +36,7 @@ createdAt: Data
 updatedAt: Data
 Certifique-se de que os IDs dos livros sejam sequenciais e únicos, começando do ID 1.
 
-##Rotas
+## Rotas
 A API disponibiliza as seguintes rotas para manipulação dos livros:
 
 POST /books: Criação de um novo livro.
@@ -44,7 +47,7 @@ DELETE /books/:id: Remoção de um livro do sistema.
 ##Requisições e Respostas
 As requisições e respostas para cada rota devem seguir os formatos especificados. Aqui estão alguns exemplos:
 
-##POST /books
+## POST /books
 Requisição:
 json
 ```
@@ -66,7 +69,7 @@ json
 	"updatedAt": "2023-10-06T13:14:21.752Z"
 }
 ```
-##GET /books
+## GET /books
 Resposta (Código de status 200):
 json
 ```
@@ -81,7 +84,7 @@ json
 	}
 ]
 ```
-##Middlewares
+## Middlewares
 A API inclui middlewares para gerenciamento de erros e validações:
 
 Middleware global de erros: Gerencia todos os erros e exceções da aplicação.
