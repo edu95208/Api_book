@@ -40,10 +40,15 @@ Certifique-se de que os IDs dos livros sejam sequenciais e únicos, começando d
 A API disponibiliza as seguintes rotas para manipulação dos livros:
 
 POST /books: Criação de um novo livro.
+
 GET /books: Leitura de todos os livros.
+
 GET /books/:id: Leitura de um livro específico.
+
 PATCH /books/:id: Atualização de um livro existente.
+
 DELETE /books/:id: Remoção de um livro do sistema.
+
 ##Requisições e Respostas
 As requisições e respostas para cada rota devem seguir os formatos especificados. Aqui estão alguns exemplos:
 
@@ -84,6 +89,48 @@ json
 	}
 ]
 ```
+## GET /books/:id
+Padrão de resposta (STATUS CODE 200)
+json
+```
+{
+	"id": 1,
+	"name": "Harry Potter",
+	"pages": 123,
+	"category": "fantasia",
+	"createdAt": "2023-10-06T13:14:21.752Z",
+	"updatedAt": "2023-10-06T13:14:21.752Z"
+}
+```
+## PATCH /books/:id
+Todas as chaves do corpo deverão ser opcionais (ou seja, caso alguma chave esteja ausente, a atualização ainda deverá ser bem sucedida).
+
+Modelo de requisição
+json
+```
+{
+	"name": "Harry Potter 2",
+	"pages": 321,
+	"category": "fantasia" 
+}
+```
+Padrão de resposta (STATUS CODE 200)
+json
+```
+{
+	"id": 1,
+	"name": "Harry Potter 2",
+	"pages": 321,
+	"category": "fantasia",
+	"createdAt": "2023-10-06T13:14:21.752Z",
+	"updatedAt": "2023-10-06T14:37:34.101Z"
+}
+````
+## DELETE /books/:id
+Não há corpo na resposta de exclusão.
+
+Padrão de resposta (STATUS CODE 204)
+
 ## Middlewares
 A API inclui middlewares para gerenciamento de erros e validações:
 
