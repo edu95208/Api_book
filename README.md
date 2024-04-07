@@ -16,6 +16,8 @@ Jest: Framework de testes utilizado para escrever e executar testes automatizado
 
 TypeScript: Linguagem de programação que adiciona tipagem estática ao JavaScript.
 
+Helmet: API de gerenciamento de livros estará mais segura contra vários tipos de ataques na web.
+
 
 ## Configuração Inicial
 Para começar a trabalhar com esta API, siga estas etapas:
